@@ -9,7 +9,10 @@ class HelloMessage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      umurPT: 12
+      umurPT: 12,
+      namaPemilik: 'Pratama Dimas',
+      umurPemilik: 19,
+      loliPemilik: 'elaina'
     }
   }
 
@@ -36,9 +39,17 @@ class HelloMessage extends React.Component {
         <button onClick={() => this.tick()}>nambah umur PT</button>
         <button onClick={() => this.thin()}>ngurang umut PT</button>
         {this.state.umurPT === 15 ? (<p>gambar hilang :p</p>) : (<img src={logoWoy} alt="logo" />)} 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ol>
+          <li>
+            nama pemilik: {this.state.namaPemilik}
+          </li>
+          <li>
+            umur Pemilik: {this.state.umurPemilik}
+          </li>
+          <li>
+            loli Pemilik: {this.state.loliPemilik}
+          </li>
+        </ol>
         <a
           className="App-link"
           href="https://reactjs.org"
